@@ -12,7 +12,7 @@ const hashPathPlugin = () => ({
       if (fs.existsSync(cleanPath) && fs.statSync(cleanPath).isFile()) {
         return await fs.promises.readFile(cleanPath, 'utf-8');
       }
-    } catch (_e) {
+    } catch {
       // Pass through to other loaders
     }
     return null;
